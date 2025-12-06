@@ -31,3 +31,13 @@ def test_power():
     calc = Calculator()
     assert calc.power(2, 3) == 8
     assert calc.power(5, 0) == 1
+
+def test_modulo():
+    calc = Calculator()
+    assert calc.modulo(10, 3) == 1
+    assert calc.modulo(5, 5) == 0
+
+def test_modulo_by_zero():
+    calc = Calculator()
+    with pytest.raises(ValueError):
+        calc.modulo(5, 0)

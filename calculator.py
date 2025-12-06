@@ -20,3 +20,9 @@ class Calculator:
     def power(self, a, b):
         """Возведение в степень"""
         return a ** b
+
+    def modulo(self, a, b):
+        """Остаток от деления"""
+        if b == 0:
+            raise ValueError("Cannot divide by zero")
+        return a % b
